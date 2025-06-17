@@ -1,0 +1,14 @@
+:host {
+  @apply h-navbar-height block w-full;
+}
+
+// Navbar visibility states
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+// Add backdrop blur effect when navbar is visible and scrolled
+.navbar-scrolled {
+  backdrop-filter: blur(12px);
+  background-color: rgb(15 15 15 / 0.95);
+}

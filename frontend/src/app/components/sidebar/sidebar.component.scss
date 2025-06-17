@@ -1,5 +1,5 @@
 .sidebar {
-  @apply top-navbar-height h-full w-full bg-yt-sidebar border-r border-yt-hover z-10;
+  @apply top-navbar-height h-full w-full bg-yt-sidebar border-yt-hover z-10;
 
   &-item {
     @apply flex items-center px-5 py-3 text-yt-text-secondary hover:bg-yt-hover hover:text-white transition-colors rounded-xl;

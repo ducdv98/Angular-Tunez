@@ -69,6 +69,7 @@ module.exports = {
         88: "22rem",
         128: "32rem",
         "navbar-height": "64px",
+        "sidebar-width": "240px",
       },
       // Custom animations for music interactions
       animation: {

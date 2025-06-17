@@ -5,8 +5,10 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'app-user',
   imports: [MatIconModule],
   template: `
-    <div class="flex items-center w-6 h-6 rounded-full bg-yt-hover">
-      <mat-icon>person</mat-icon>
+    <div
+      class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center"
+    >
+      <span class="text-sm font-medium text-white">D</span>
     </div>
   `,
 })

@@ -17,5 +17,9 @@
     }
 
     @apply rounded-none;
+
+    &.mat-drawer-side {
+      @apply border-r-0 border-r-transparent;
+    }
   }
 }

@@ -1,0 +1,7 @@
+<div class="genre-container">
+  <mat-chip-set class="genre-chip-set">
+    @for (genre of genres; track genre) {
+      <mat-chip class="genre-chip">{{ genre }}</mat-chip>
+    }
+  </mat-chip-set>
+</div>

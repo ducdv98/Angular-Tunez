@@ -1,5 +1,9 @@
 <div class="flex w-screen h-screen flex-col">
-  <app-navbar (toggleSidebar)="toggleSidebar()"></app-navbar>
+  <app-navbar
+    (toggleSidebar)="toggleSidebar()"
+    [isVisible]="navbarVisible()"
+    [isScrolled]="navbarScrolled()"
+  ></app-navbar>
   <mat-drawer-container class="h-full" autosize>
     <mat-drawer
       #drawer
@@ -10,8 +14,11 @@
       <app-sidebar [expanded]="sidebarExpanded()"></app-sidebar>
     </mat-drawer>
 
-    <mat-drawer-content>
-      <router-outlet></router-outlet>
+    <mat-drawer-content #drawerContent class="overflow-auto">
+      <main class="p-4 h-full bg-yt-card">
+        <router-outlet></router-outlet>
+      </main>
     </mat-drawer-content>
   </mat-drawer-container>
+  <app-player></app-player>
 </div>

@@ -1,0 +1,29 @@
+<div class="mb-8">
+  <div class="flex items-center justify-between mb-6">
+    <div class="flex items-center">
+      <div
+        class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center mr-4"
+      >
+        <span class="text-lg">😊</span>
+      </div>
+      <h2 class="text-2xl font-bold text-white">Listen again</h2>
+    </div>
+    <div class="flex gap-2">
+      <button class="p-2 hover:bg-yt-hover rounded-full transition-colors">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" />
+        </svg>
+      </button>
+      <button class="p-2 hover:bg-yt-hover rounded-full transition-colors">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="flex gap-4 overflow-x-auto scrollbar-hide pb-4">
+    @for (album of albums; track album.title) {
+      <app-album-card [album]="album"></app-album-card>
+    }
+  </div>
+</div>
