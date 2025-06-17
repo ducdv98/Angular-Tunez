@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ==========================================================================
+   MAIN STYLES ENTRY POINT
+   ========================================================================== */
+
+// 1. Import TailwindCSS directives
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// 2. Import vendor/third-party styles
+@import './styles/vendor';
+
+// 3. Import base styles and variables
+@import './styles/base';
+
+// 4. Import layout styles
+@import './styles/layout';
+
+// 5. Import component styles
+@import './styles/components';
+
+// 6. Import utility classes and helpers
+@import './styles/utilities';
+
+// 7. Import theme-specific styles
+@import './styles/themes';

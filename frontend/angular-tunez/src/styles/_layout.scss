@@ -1,0 +1,93 @@
+/* ==========================================================================
+   LAYOUT STYLES
+   ========================================================================== */
+
+// Common layout patterns
+.container-fluid {
+  @apply w-full px-4 sm:px-6 lg:px-8;
+}
+
+.container-centered {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.container-narrow {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+// Flex utilities
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-start {
+  @apply flex items-center justify-start;
+}
+
+.flex-end {
+  @apply flex items-center justify-end;
+}
+
+// Grid layouts for music content
+.grid-albums {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4;
+}
+
+.grid-songs {
+  @apply grid grid-cols-1 gap-2;
+}
+
+.grid-artists {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6;
+}
+
+// Responsive visibility utilities
+.mobile-only {
+  @apply block sm:hidden;
+}
+
+.tablet-up {
+  @apply hidden sm:block;
+}
+
+.desktop-only {
+  @apply hidden lg:block;
+}
+
+// Common section spacing
+.section-padding {
+  @apply py-12 lg:py-16;
+}
+
+.section-padding-sm {
+  @apply py-8 lg:py-12;
+}
+
+// Music player specific layouts
+.player-layout {
+  @apply fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 z-50;
+}
+
+.sidebar-layout {
+  @apply fixed left-0 top-0 h-full w-64 bg-neutral-900 text-white transform transition-transform duration-300 ease-in-out;
+  
+  &.closed {
+    @apply -translate-x-full;
+  }
+}
+
+.main-content-layout {
+  @apply min-h-screen transition-all duration-300 ease-in-out;
+  
+  &.with-sidebar {
+    @apply ml-64;
+  }
+  
+  &.with-player {
+    @apply pb-20;
+  }
+} 
