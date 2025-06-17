@@ -51,7 +51,7 @@ module.exports = {
         },
         "yt-bg": "#0F0F0F",
         "yt-card": "#212121",
-        "yt-hover": "#272727",
+        "yt-hover": "rgba(255, 255, 255, .1)",
         "yt-text": "#FFFFFF",
         "yt-text-secondary": "#AAAAAA",
         "yt-red": "#FF0000",
@@ -68,6 +68,7 @@ module.exports = {
         18: "4.5rem",
         88: "22rem",
         128: "32rem",
+        "navbar-height": "64px",
       },
       // Custom animations for music interactions
       animation: {

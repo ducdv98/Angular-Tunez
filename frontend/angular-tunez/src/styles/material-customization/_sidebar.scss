@@ -1,10 +1,21 @@
 @use "@angular/material" as mat;
 
-// Customize the entire app. Change :root to your selector if you want to scope the styles.
 :root {
   @include mat.sidenav-overrides(
     (
-      container-width: 240px,
+      container-width: var(--sidebar-width, 240px),
     )
   );
+
+  mat-drawer {
+    &.collapsed {
+      @include mat.sidenav-overrides(
+        (
+          container-width: var(--sidebar-width-collapsed, 72px),
+        )
+      );
+    }
+
+    @apply rounded-none;
+  }
 }

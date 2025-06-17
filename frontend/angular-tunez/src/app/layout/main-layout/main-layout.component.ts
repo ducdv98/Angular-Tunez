@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {
   MatDrawerContainer,
   MatDrawer,
   MatDrawerContent,
 } from '@angular/material/sidenav';
 import { RouterOutlet } from '@angular/router';
-import { SidebarComponent } from '../../components/sidebar.component';
+import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 
 @Component({
   selector: 'app-main-layout',
@@ -15,8 +16,15 @@ import { SidebarComponent } from '../../components/sidebar.component';
     RouterOutlet,
     MatDrawerContent,
     SidebarComponent,
+    NavbarComponent,
   ],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss',
 })
-export class MainLayoutComponent {}
+export class MainLayoutComponent {
+  sidebarExpanded = signal(true);
+
+  toggleSidebar() {
+    this.sidebarExpanded.set(!this.sidebarExpanded());
+  }
+}

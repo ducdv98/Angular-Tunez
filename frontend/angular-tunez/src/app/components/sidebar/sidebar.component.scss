@@ -1,0 +1,19 @@
+.sidebar {
+  @apply top-navbar-height h-full w-full bg-yt-sidebar border-r border-yt-hover z-10;
+
+  &-item {
+    @apply flex items-center px-5 py-3 text-yt-text-secondary hover:bg-yt-hover hover:text-white transition-colors rounded-xl;
+
+    &.collapsed {
+      @apply flex-col justify-center items-center text-xs gap-2;
+
+      mat-icon {
+        @apply mr-0;
+      }
+    }
+
+    &.active {
+      @apply bg-yt-hover text-white;
+    }
+  }
+}
